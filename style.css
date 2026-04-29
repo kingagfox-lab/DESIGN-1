@@ -1,0 +1,228 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+.text-gradient {
+    background: linear-gradient(135deg, #e67e22 0%, #f39c12 50%, #e67e22 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+
+    0%,
+    100% {
+        background-position: 0% center;
+    }
+
+    50% {
+        background-position: 200% center;
+    }
+}
+
+.hero-gradient {
+    background: radial-gradient(ellipse at 70% 50%, rgba(230, 126, 34, 0.06) 0%, transparent 60%),
+        radial-gradient(ellipse at 30% 30%, rgba(0, 153, 153, 0.04) 0%, transparent 50%);
+}
+
+.grid-bg {
+    width: 100%;
+    height: 100%;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #e67e22, #f39c12);
+    border-radius: 1px;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.fade-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.dna-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dna-glow {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(230, 126, 34, 0.15) 0%, transparent 70%);
+    border-radius: 50%;
+    filter: blur(40px);
+    animation: glowPulse 4s ease-in-out infinite;
+    pointer-events: none;
+}
+
+.dna-glow-dark {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    background: radial-gradient(circle, rgba(230, 126, 34, 0.2) 0%, rgba(0, 153, 153, 0.1) 50%, transparent 70%);
+    border-radius: 50%;
+    filter: blur(50px);
+    animation: glowPulse 4s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes glowPulse {
+
+    0%,
+    100% {
+        opacity: 0.6;
+        transform: scale(0.95);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+}
+
+.tab-btn {
+    background: transparent;
+    color: #6b7280;
+    border: 2px solid #e5e7eb;
+    cursor: pointer;
+}
+
+.tab-btn:hover {
+    border-color: #e67e22;
+    color: #e67e22;
+}
+
+.tab-btn.active {
+    background: linear-gradient(135deg, #e67e22, #f39c12);
+    color: white;
+    border-color: transparent;
+    box-shadow: 0 4px 15px rgba(230, 126, 34, 0.3);
+}
+
+.tab-content {
+    display: none;
+    animation: tabFadeIn 0.5s ease;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@keyframes tabFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.floating-particles {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.particle {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background: rgba(230, 126, 34, 0.3);
+    border-radius: 50%;
+    animation: floatParticle linear infinite;
+}
+
+@keyframes floatParticle {
+    0% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-100px) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+.brain-pixel-art {
+    width: 200px;
+    height: 200px;
+    position: relative;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #e67e22, #f39c12);
+    border-radius: 3px;
+}
+
+@media (max-width: 768px) {
+    .dna-container canvas {
+        width: 300px !important;
+        height: 400px !important;
+    }
+}
+
+::selection {
+    background: rgba(230, 126, 34, 0.2);
+    color: #1a1a2e;
+}

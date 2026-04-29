@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siemens Healthineers | Pioneering Breakthroughs in Healthcare</title>
+    <meta name="description" content="Siemens Healthineers enables healthcare providers worldwide to deliver high-quality, efficient patient care through advanced medical technology.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        siemens: { orange: '#e67e22', dark: '#1a1a2e', teal: '#009999', gray: { 50: '#f8f9fa', 100: '#e9ecef', 200: '#dee2e6', 800: '#2d2d3d' } },
+                    },
+                    fontFamily: { inter: ['Inter', 'sans-serif'] },
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-inter bg-white text-gray-900 overflow-x-hidden">
+
+    <!-- NAVBAR -->
+    <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-500 bg-white/80 backdrop-blur-xl border-b border-gray-100/50">
+        <div class="max-w-7xl mx-auto px-6 flex items-center justify-between h-16">
+            <a href="#" class="flex items-center gap-2 group">
+                <div class="w-8 h-8 bg-gradient-to-br from-siemens-orange to-orange-500 rounded-lg flex items-center justify-center">
+                    <span class="text-white font-bold text-xs">S</span>
+                </div>
+                <div class="leading-tight">
+                    <span class="font-bold text-sm tracking-tight text-siemens-dark">SIEMENS</span><br>
+                    <span class="text-[10px] tracking-widest text-siemens-teal font-semibold">Healthineers</span>
+                </div>
+            </a>
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#products" class="nav-link text-sm font-medium text-gray-600 hover:text-siemens-orange transition-colors relative">Products</a>
+                <a href="#clinical" class="nav-link text-sm font-medium text-gray-600 hover:text-siemens-orange transition-colors relative">Clinical</a>
+                <a href="#services" class="nav-link text-sm font-medium text-gray-600 hover:text-siemens-orange transition-colors relative">Services</a>
+                <a href="#insights" class="nav-link text-sm font-medium text-gray-600 hover:text-siemens-orange transition-colors relative">Insights</a>
+            </div>
+            <a href="#contact" class="hidden md:inline-flex px-5 py-2.5 bg-gradient-to-r from-siemens-orange to-orange-500 text-white text-sm font-semibold rounded-full hover:shadow-lg hover:shadow-orange-300/40 transition-all duration-300 hover:-translate-y-0.5">
+                Request Consultation
+            </a>
+            <button id="mobile-menu-btn" class="md:hidden flex flex-col gap-1.5 p-2">
+                <span class="w-6 h-0.5 bg-gray-800 transition-all"></span>
+                <span class="w-6 h-0.5 bg-gray-800 transition-all"></span>
+                <span class="w-4 h-0.5 bg-gray-800 transition-all"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="hero" class="relative min-h-screen flex items-center pt-16">
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="hero-gradient absolute inset-0"></div>
+            <div class="floating-particles" id="hero-particles"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center relative z-10">
+            <div class="fade-up">
+                <div class="inline-flex items-center gap-2 bg-siemens-orange/10 border border-siemens-orange/20 rounded-full px-4 py-1.5 mb-6">
+                    <div class="w-2 h-2 bg-siemens-orange rounded-full animate-pulse"></div>
+                    <span class="text-xs font-semibold text-siemens-orange tracking-wide uppercase">Trusted Worldwide</span>
+                </div>
+                <h1 class="text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.05] tracking-tight text-siemens-dark mb-6">
+                    We Pioneer<br>
+                    <span class="text-gradient">Breakthroughs</span><br>
+                    in Healthcare
+                </h1>
+                <p class="text-lg text-gray-500 max-w-lg mb-8 leading-relaxed">
+                    At Siemens Healthineers, we enable healthcare providers worldwide to deliver high-quality, efficient patient care through advanced medical technology.
+                </p>
+                <div class="flex flex-wrap gap-4 mb-12">
+                    <a href="#contact" class="group inline-flex items-center gap-2 px-7 py-3.5 bg-gradient-to-r from-siemens-orange to-orange-500 text-white font-semibold rounded-full hover:shadow-xl hover:shadow-orange-300/30 transition-all duration-300 hover:-translate-y-1">
+                        Request Consultation
+                        <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                    </a>
+                    <a href="#products" class="inline-flex items-center gap-2 px-7 py-3.5 border-2 border-gray-200 text-gray-700 font-semibold rounded-full hover:border-siemens-orange hover:text-siemens-orange transition-all duration-300">
+                        Explore Products
+                    </a>
+                </div>
+                <!-- Stats -->
+                <div class="flex gap-8">
+                    <div class="stat-item"><span class="text-3xl font-bold text-siemens-dark counter" data-target="45">0</span><span class="text-siemens-orange font-bold">+</span><p class="text-xs text-gray-400 mt-1">Countries Served</p></div>
+                    <div class="w-px bg-gray-200"></div>
+                    <div class="stat-item"><span class="text-3xl font-bold text-siemens-dark counter" data-target="50">0</span><span class="text-siemens-orange font-bold">K+</span><p class="text-xs text-gray-400 mt-1">Systems Installed</p></div>
+                    <div class="w-px bg-gray-200"></div>
+                    <div class="stat-item"><span class="text-3xl font-bold text-siemens-dark counter" data-target="10">0</span><span class="text-siemens-orange font-bold">K+</span><p class="text-xs text-gray-400 mt-1">R&D Engineers</p></div>
+                </div>
+            </div>
+            <!-- DNA Canvas -->
+            <div class="relative flex items-center justify-center fade-up" style="animation-delay: 0.3s;">
+                <div class="dna-container">
+                    <canvas id="dna-canvas" width="500" height="600"></canvas>
+                    <div class="dna-glow"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIAL BAR -->
+    <section class="py-8 bg-gray-50 border-y border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 flex flex-wrap items-center justify-between gap-4">
+            <div class="flex items-center gap-3">
+                <div class="flex -space-x-3">
+                    <div class="w-10 h-10 rounded-full bg-gradient-to-br from-siemens-orange to-orange-400 border-2 border-white flex items-center justify-center text-white font-bold text-xs">JD</div>
+                    <div class="w-10 h-10 rounded-full bg-gradient-to-br from-teal-500 to-cyan-400 border-2 border-white flex items-center justify-center text-white font-bold text-xs">MK</div>
+                    <div class="w-10 h-10 rounded-full bg-gradient-to-br from-purple-500 to-pink-400 border-2 border-white flex items-center justify-center text-white font-bold text-xs">AL</div>
+                </div>
+                <p class="text-sm text-gray-500 italic">"Behind every one of these <strong class="text-siemens-dark">20,000+</strong> scans is a human story."</p>
+            </div>
+            <div class="flex items-center gap-6 text-gray-300 text-xs font-medium tracking-wide">
+                <span>MAYO CLINIC</span><span>•</span><span>CHARITÉ</span><span>•</span><span>JOHNS HOPKINS</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- DISCOVERY / DNA SECTION -->
+    <section id="clinical" class="relative py-24 bg-siemens-dark overflow-hidden">
+        <div class="absolute inset-0 opacity-5">
+            <div class="grid-bg"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center relative z-10">
+            <div class="fade-up">
+                <div class="inline-flex items-center gap-2 mb-4">
+                    <div class="w-1 h-6 bg-siemens-orange rounded-full"></div>
+                    <span class="text-xs font-bold tracking-[0.2em] text-siemens-orange uppercase">Discovery</span>
+                </div>
+                <h2 class="text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">
+                    Pioneering breakthroughs are in our <span class="text-gradient">DNA</span>
+                </h2>
+                <p class="text-gray-400 text-lg leading-relaxed mb-8">
+                    From AI-powered diagnostics to precision imaging, our relentless pursuit of innovation drives every breakthrough in modern healthcare.
+                </p>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-white/5 backdrop-blur border border-white/10 rounded-2xl p-5 hover:bg-white/10 transition-all duration-300 group">
+                        <div class="text-3xl font-bold text-siemens-orange mb-1 counter" data-target="200">0</div>
+                        <p class="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">AI Algorithms</p>
+                    </div>
+                    <div class="bg-white/5 backdrop-blur border border-white/10 rounded-2xl p-5 hover:bg-white/10 transition-all duration-300 group">
+                        <div class="text-3xl font-bold text-siemens-orange mb-1 counter" data-target="18000">0</div>
+                        <p class="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">Patents Filed</p>
+                    </div>
+                </div>
+            </div>
+            <div class="relative flex items-center justify-center fade-up" style="animation-delay: 0.2s;">
+                <div class="dna-container dna-container-dark">
+                    <canvas id="dna-canvas-2" width="450" height="550"></canvas>
+                    <div class="dna-glow-dark"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EMPOWERING CARE SECTION -->
+    <section id="products" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16 fade-up">
+                <h2 class="text-4xl lg:text-5xl font-bold text-siemens-dark mb-4">Empowering Care.<br><span class="text-gradient">Sustaining the Future.</span></h2>
+                <p class="text-gray-500 max-w-2xl mx-auto text-lg">Technology is only as powerful as the lives it touches.</p>
+            </div>
+            <!-- Tabs -->
+            <div class="flex justify-center gap-3 mb-12 fade-up">
+                <button class="tab-btn active px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300" data-tab="tab1">01 Patient Focus</button>
+                <button class="tab-btn px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300" data-tab="tab2">02 Innovation</button>
+                <button class="tab-btn px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300" data-tab="tab3">03 Sustainability</button>
+            </div>
+            <!-- Tab Content -->
+            <div class="tab-content active" id="tab1">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="fade-up">
+                        <h3 class="text-2xl font-bold text-siemens-dark mb-4">Patient Focus</h3>
+                        <p class="text-gray-500 leading-relaxed mb-6">At Siemens Healthineers, we design our diagnostic and therapeutic solutions around the human experience. By streamlining clinical workflows and reducing scan times, we help eliminate patient anxiety while empowering healthcare professionals to focus on what truly matters: delivering compassionate, personalized care.</p>
+                        <ul class="space-y-3">
+                            <li class="flex items-center gap-3"><div class="w-6 h-6 rounded-full bg-siemens-orange/10 flex items-center justify-center"><svg class="w-3 h-3 text-siemens-orange" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></div><span class="text-sm text-gray-600">Reduced scan times by up to 50%</span></li>
+                            <li class="flex items-center gap-3"><div class="w-6 h-6 rounded-full bg-siemens-orange/10 flex items-center justify-center"><svg class="w-3 h-3 text-siemens-orange" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></div><span class="text-sm text-gray-600">AI-enhanced image clarity</span></li>
+                            <li class="flex items-center gap-3"><div class="w-6 h-6 rounded-full bg-siemens-orange/10 flex items-center justify-center"><svg class="w-3 h-3 text-siemens-orange" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></div><span class="text-sm text-gray-600">Ergonomic patient-first design</span></li>
+                        </ul>
+                    </div>
+                    <div class="relative rounded-3xl overflow-hidden shadow-2xl shadow-siemens-orange/10 fade-up" style="animation-delay:0.2s;">
+                        <div class="aspect-video bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
+                            <div class="brain-pixel-art" id="brain-pixel"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-content" id="tab2">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div><h3 class="text-2xl font-bold text-siemens-dark mb-4">Innovation at Scale</h3><p class="text-gray-500 leading-relaxed">Our R&D investment of over €2 billion annually fuels groundbreaking advancements. From photon-counting CT to AI-native workflows, we push the boundaries of what's possible in healthcare technology.</p></div>
+                    <div class="aspect-video bg-gradient-to-br from-siemens-orange/5 to-teal-50 rounded-3xl flex items-center justify-center"><span class="text-6xl">🔬</span></div>
+                </div>
+            </div>
+            <div class="tab-content" id="tab3">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div><h3 class="text-2xl font-bold text-siemens-dark mb-4">Sustainable Healthcare</h3><p class="text-gray-500 leading-relaxed">We commit to reducing our environmental footprint while expanding access to care. Our energy-efficient systems and circular economy initiatives lead the way toward a greener healthcare industry.</p></div>
+                    <div class="aspect-video bg-gradient-to-br from-green-50 to-teal-50 rounded-3xl flex items-center justify-center"><span class="text-6xl">🌱</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CLINICAL EXCELLENCE -->
+    <section id="services" class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16">
+            <div class="fade-up">
+                <h2 class="text-4xl lg:text-5xl font-bold text-siemens-dark leading-tight mb-6">Defining the Next Era of <span class="text-gradient">Clinical Excellence</span></h2>
+                <p class="text-gray-500 text-lg leading-relaxed">We envision a world where diseases are caught before they manifest, where treatments are personalized through AI, and where healthcare systems operate with unprecedented efficiency and compassion.</p>
+            </div>
+            <div class="space-y-8 fade-up" style="animation-delay: 0.2s;">
+                <div>
+                    <h3 class="text-xl font-bold text-siemens-dark mb-3 flex items-center gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-siemens-orange/10 flex items-center justify-center"><svg class="w-4 h-4 text-siemens-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg></div>
+                        Our Vision
+                    </h3>
+                    <p class="text-gray-500 leading-relaxed">Shaping the future of healthcare through relentless innovation and digital transformation. We envision a world where diseases are caught before they manifest, where treatments are personalized through AI.</p>
+                </div>
+                <div class="w-full h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent"></div>
+                <div>
+                    <h3 class="text-xl font-bold text-siemens-dark mb-3 flex items-center gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-siemens-teal/10 flex items-center justify-center"><svg class="w-4 h-4 text-siemens-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg></div>
+                        Our Purpose
+                    </h3>
+                    <p class="text-gray-500 leading-relaxed">To pioneer breakthroughs in healthcare. For everyone. Everywhere. Sustainably. We believe that access to healthcare is a fundamental right, ensuring that every patient benefits from world-class diagnostic precision.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DIAGNOSTIC IMAGING -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="relative bg-gradient-to-br from-siemens-dark to-[#0f0f23] rounded-3xl overflow-hidden p-12 lg:p-16 fade-up">
+                <div class="absolute inset-0 opacity-10"><div class="grid-bg"></div></div>
+                <div class="relative z-10 grid lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h2 class="text-3xl lg:text-4xl font-bold text-white mb-4">Transform Your Diagnostic Imaging Capabilities</h2>
+                        <p class="text-gray-400 leading-relaxed mb-8">Empower your healthcare facility with Siemens MRI technology designed for precision imaging, intelligent workflows, and exceptional patient comfort.</p>
+                        <div class="flex flex-wrap gap-4">
+                            <a href="#" class="px-6 py-3 bg-gradient-to-r from-siemens-orange to-orange-500 text-white font-semibold rounded-full hover:shadow-lg hover:shadow-orange-500/30 transition-all duration-300">Request a Product Guide</a>
+                            <a href="#" class="px-6 py-3 border border-white/20 text-white font-semibold rounded-full hover:bg-white/10 transition-all duration-300">Contact Our Specialists</a>
+                        </div>
+                    </div>
+                    <div class="flex justify-center">
+                        <div class="w-64 h-64 relative">
+                            <canvas id="brain-canvas" width="256" height="256"></canvas>
+                            <div class="absolute inset-0 bg-gradient-to-t from-siemens-dark/80 to-transparent rounded-full pointer-events-none"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT / CTA -->
+    <section id="contact" class="py-24 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-6 text-center fade-up">
+            <h2 class="text-4xl lg:text-5xl font-bold text-siemens-dark mb-6">Ready to Transform Healthcare?</h2>
+            <p class="text-gray-500 text-lg mb-10 max-w-2xl mx-auto">Partner with us to bring cutting-edge medical technology to your facility. Our team is ready to help you take the next step.</p>
+            <form class="max-w-lg mx-auto flex gap-3">
+                <input type="email" placeholder="Enter your email" class="flex-1 px-5 py-3.5 rounded-full border border-gray-200 focus:outline-none focus:border-siemens-orange focus:ring-2 focus:ring-siemens-orange/20 text-sm transition-all">
+                <button type="submit" class="px-7 py-3.5 bg-gradient-to-r from-siemens-orange to-orange-500 text-white font-semibold rounded-full hover:shadow-lg hover:shadow-orange-300/30 transition-all duration-300 whitespace-nowrap">Get Started</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-siemens-dark text-gray-400 py-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-10 mb-12">
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-8 h-8 bg-gradient-to-br from-siemens-orange to-orange-500 rounded-lg flex items-center justify-center"><span class="text-white font-bold text-xs">S</span></div>
+                        <div class="leading-tight"><span class="font-bold text-sm text-white">SIEMENS</span><br><span class="text-[10px] tracking-widest text-siemens-teal font-semibold">Healthineers</span></div>
+                    </div>
+                    <p class="text-sm leading-relaxed">Pioneering breakthroughs in healthcare. For everyone. Everywhere.</p>
+                </div>
+                <div><h4 class="font-semibold text-white mb-4 text-sm">Products</h4><ul class="space-y-2 text-sm"><li><a href="#" class="hover:text-siemens-orange transition-colors">MRI Systems</a></li><li><a href="#" class="hover:text-siemens-orange transition-colors">CT Scanners</a></li><li><a href="#" class="hover:text-siemens-orange transition-colors">Ultrasound</a></li><li><a href="#" class="hover:text-siemens-orange transition-colors">X-ray</a></li></ul></div>
+                <div><h4 class="font-semibold text-white mb-4 text-sm">Company</h4><ul class="space-y-2 text-sm"><li><a href="#" class="hover:text-siemens-orange transition-colors">About Us</a></li><li><a href="#" class="hover:text-siemens-orange transition-colors">Careers</a></li><li><a href="#" class="hover:text-siemens-orange transition-colors">Newsroom</a></li><li><a href="#" class="hover:text-siemens-orange transition-colors">Sustainability</a></li></ul></div>
+                <div><h4 class="font-semibold text-white mb-4 text-sm">Connect</h4><ul class="space-y-2 text-sm"><li><a href="#" class="hover:text-siemens-orange transition-colors">LinkedIn</a></li><li><a href="#" class="hover:text-siemens-orange transition-colors">Twitter</a></li><li><a href="#" class="hover:text-siemens-orange transition-colors">YouTube</a></li><li><a href="#" class="hover:text-siemens-orange transition-colors">Contact</a></li></ul></div>
+            </div>
+            <div class="border-t border-white/10 pt-8 flex flex-wrap justify-between items-center gap-4 text-xs">
+                <p>&copy; 2026 Siemens Healthineers. All rights reserved.</p>
+                <div class="flex gap-6"><a href="#" class="hover:text-white transition-colors">Privacy</a><a href="#" class="hover:text-white transition-colors">Terms</a><a href="#" class="hover:text-white transition-colors">Cookies</a></div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
